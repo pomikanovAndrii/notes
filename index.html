@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>
+            Нотатник
+        </title>
+    </head>
+    <body>
+        <style>
+            .note {
+                border: solid;
+                width: 250px;
+                height: 250px;
+                background-color: lightsalmon;
+                margin: 15px;
+            }
+            .head_note {
+                width: 100%;
+                height: 30px;
+                background-color: aliceblue;
+            }
+            .body_note {
+                width: 100%;
+                height: 220px;
+                border: none;
+                background: transparent;
+            }
+
+            .icon{
+                height: 25px;
+                width: 25px;
+            }
+            .title_note {
+                height: 100%;
+                width: 80%;
+                padding: 12px 5px;
+                background: transparent;
+                border: none;
+            }
+            .title_note:focus {
+                outline: 0;
+            }
+            textarea:focus {
+                outline: 0;
+            }
+            .notes {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .add_note {
+                background-color: rgba(128, 128, 128, 0.25);
+                border-color: rgba(128, 128, 128, 0.25);
+            }
+            .body_note{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .add_symbol {
+                font-size: 4rem;
+                padding: 0;
+                margin: 0;
+                cursor: pointer;
+            }
+            .dot {
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(98, 121, 192); 
+                opacity: none;
+            }
+        </style>
+        <!--<button id="add_note">Створити нотатку</button>-->
+        <button id="save_notes">Зберегти</button>
+        <button id="load_notes">Завантажити</button>
+
+        <div class="notes">
+            <div class="note add_note" id="add_note_block">
+                <div class="head_note">
+                    <input type="text" class="title_note">
+                    <img class="icon" style="opacity: 0.2;" src="img/delete_icon.png">
+                </div>
+                <div class="body_note">
+                    <span class="dot" id="add_note_btn">   
+                        <h1 class="add_symbol">+</h1>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/note.js"></script>
+    </body>
+</html>
